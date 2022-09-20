@@ -1,23 +1,90 @@
 "use strict";
 console.log("hello");
-let hours = [
-  "6am",
-  "7am",
-  "8am",
-  "9am",
-  "10am",
-  "11am",
-  "12am",
-  "1pm",
-  "2pm",
-  "3pm",
-  "4pm",
-  "5pm",
-  "6pm",
-  "7pm",
-  "8pm",
-];
+let hours = ["6am","7am","8am","9am","10am","11am","12am","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm",];
 // 6:00 AM to 8:00 PM for all locations
+let cookieCafeSales = document.getElementById('daily sales');
+
+let allCookieCafes = [];
+
+// Constructor ---
+function Cookiecafe(location, minHrCust, maxHrCust, customer, cookies, dailyTotal){
+  this.location = location;
+  this.minHrCust = minHrCust;
+  this.maxHrCust = maxHrCust;
+  this.customer = customer;
+  this.cookies = cookies;
+  this.dailyTotal = dailyTotal;
+  this.averageCookiesPerCust = averageCookiesPerCust;
+  allCookieCafes.push(this);
+}
+
+Cookiecafe.prototype.custPerHour = function(){
+  for (let i = 0; i < hours.length; i++) {
+    return Math.floor(Math.random() * (this.maxHrCust - this.minHrCust + 1) + this.minHrCust);
+  }
+}
+
+Cookiecafe.prototype.cookiesPerHr = function () {
+  for (let i = 0; i < this.customer.length; i++) {
+this.cookies[i] = Math.round(this.customer[i] * this.averageCookiesPerCust);
+this.dailyTotal += this.cookies[i];
+}
+// Table DOM Rendering
+cookieCafe.prototype.render = function(){
+  let section = document.getElementById('results');
+let tableElem = document.createElement('table');
+section.appendChild(tableElem);
+
+// tr is ul
+let row1 = document.createElement('tr');
+tableElem.appendChild(row1);
+
+// create content (td or th) for table row // "li"
+let th1Elem = document.createElement('th');
+th1Elem.textContent = this.location;
+row1.appendChild(th1Elem);
+
+let th2Elem = document.createElement('th');
+th2Elem.textContent = this.cookies;
+row1.appendChild(th2Elem)
+
+
+
+
+
+let th3Elem = document.createElement('th');
+th3Elem.textContent = this.customer;
+trElem.appendChild(th3Elem);
+
+
+  
+  let dailySales = 0
+  let dailyTotal = 0
+
+}
+
+
+/*
+displayCookies: function () {
+  this.cookiesPerHr();
+  let section = document.getElementById("results");
+  let heading = document.createElement("h2");
+  heading.textContent = this.name;
+  section.appendChild(heading);
+  let list = document.createElement("ul");
+  section.appendChild(list);
+  for (let i = 0; i < this.customer.length; i++) {
+    let listItem = document.createElement("li");
+    listItem.textContent = `${hours[i]}: ${this.cookies[i]} cookies`;
+    list.appendChild(listItem);
+  }
+  let totalListItem = document.createElement("li");
+  list.appendChild(totalListItem);
+  totalListItem.textContent = `Total: ${this.dailyTotal} cookies`;
+},
+    
+    
+    
 
 // The minimum number of customers per hour
 //The maximum number of customers per hour
