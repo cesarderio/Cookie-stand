@@ -1,5 +1,35 @@
 * 
 {
+  background-color: aquamarine;
  align-self: center;
  justify-content: center;
+}
+body 
+{
+ align-content: center;
+
+}
+img {
+ display: block;
+ align-content: center;
+ margin: auto;
+}
+h1 {
+  text-align: center;
+}
+#Welcome {
+  text-align: center;
+}
+a{
+  align-content: center;
+}
+header {
+  align-items: center;
+  text-align: center;
+}
+ul {
+  margin-left: 4vw;
+}
+#results {
+  margin-left: 5vw;
 }
