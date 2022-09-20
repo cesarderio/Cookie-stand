@@ -1,12 +1,12 @@
 'use strict'
 
-let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 let open = '6:00 am to 8:00 PM'; 
 let closed = 'Sorry we\'re closed';
 
 //Welcome
-let welcome = document.getElementById("Welcome");
+let welcome = document.getElementById('Welcome');
 let welcomeHeading = document.createElement('h2');
 welcomeHeading.textContent = 'Welcome to Pat\'s Salmon Cookies!';
 welcome.appendChild(welcomeHeading);
@@ -21,7 +21,7 @@ intro.appendChild(intropara);
 
 
 // Hours
-let hours = document.getElementById("Hours");
+let hours = document.getElementById('Hours');
 let hoursHeading = document.createElement('h2');
 hoursHeading.textContent = 'Hours of Operation';
 hours.appendChild(hoursHeading);
@@ -31,7 +31,7 @@ let dailyHoursOpen = document.createElement('ul');
 dailyHours.appendChild(dailyHoursOpen);
 
 for (let i = 0; i < days.length-1; i++) {
-  let listItem = document.createElement("li");
+  let listItem = document.createElement('li');
   listItem.textContent = `${days[i]}: ${open}`;
   dailyHoursOpen.appendChild(listItem);
 }
