@@ -77,24 +77,7 @@ Cookiecafe.prototype.render = function () {
   row1.appendChild(td1);
 };
 
-// create content (td or th) for table row // "li"
-/*for(let i = 0; i < allCookieCafes.length; i++){
-    let row1 = document.createElement("tr");
-    tableElem.appendChild(row1);
-    let th1Elem = document.createElement("th");
-    th1Elem.textContent = this.location;
-    row1.appendChild(th1Elem);
-    cookieCafeSales.appendChild(row1);
-    }
-
-  let th2Elem = document.createElement("th");
-  th2Elem.textContent = this.cookies;
-  row1.appendChild(th2Elem);
-
-  let th3Elem = document.createElement("th");
-  th3Elem.textContent = this.customer;
-  trElem.appendChild(th3Elem);*/
-
+//---------------------------HEADER---------
 function createHeader() {
   let trElem = document.createElement("tr");
   let thElem = document.createElement("th");
@@ -106,10 +89,31 @@ function createHeader() {
     thElem.textContent = hours[i];
     trElem.appendChild(thElem);
   }
+  let th2Elem = document.createElement("th");
+  th2Elem.textContent = "Daily Location Total";
+  trElem.appendChild(th2Elem);
   tableElem.appendChild(trElem);
 }
 createHeader();
+//-------------------------------
+function createFooter() {
+  let rowElem = document.createElement("tr");
+  let td1 = document.createElement("td");
+  rowElem.textContent = "Hourly Totals";
+  rowElem.appendChild(td1);
 
+  for (let i = 0; i < hours.length; i++) {
+    let hourlyTotals = 0;
+    for (let j = 0; j < allCookieCafes.length; j++) {
+      hourlyTotals += allCookieCafes[j].cookiesPerHr[i];
+    }
+    hourlyTotals += allCookieCafes[j].cookiesPerHr[i];
+  }
+}
+
+createFooter;
+
+//----------------------------
 
 allCookieCafes[0].custPerHour();
 allCookieCafes[1].custPerHour();
@@ -129,14 +133,6 @@ allCookieCafes[2].render();
 allCookieCafes[3].render();
 allCookieCafes[4].render();
 
-// code to add new shop
-
-
-//Event Listener to Form
-
-
-// allCookieCafes();
-
 /*
 displayCookies: function () {
   this.cookiesPerHr();
@@ -155,21 +151,7 @@ displayCookies: function () {
   list.appendChild(totalListItem);
   totalListItem.textContent = `Total: ${this.dailyTotal} cookies`;
 },
-    
-    
-    
 
-// The minimum number of customers per hour
-//The maximum number of customers per hour
-// The average number of cookies purchased per customer
-
-// Store the min/max hourly customers, and the average cookies per customer, in object properties.
-// Use a method of that object to generate a random number of customers per hour. Objects/Math/random
-// Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated.
-// Store the results for each location in a separate array… perhaps as a property of the object representing that location.
-// Display the values of each array as unordered lists in the browser.
-// Calculating the sum of these hourly totals; your output for each location should look like this:
-//--------------------------------------------------------------
 const seattle = {
   name: "Seattle",
   minHrCust: 23,
