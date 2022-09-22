@@ -1,33 +1,124 @@
-* 
-{
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   background-color: aquamarine;
- align-self: center;
- justify-content: center;
+  
 }
-body 
-{
- align-content: center;
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  border: 3px solid rgb(3, 113, 130);
+  border-radius: 10px;
+  background-color: rgb(253, 214, 19);
+}
+
+header img {
+  cursor: pointer;
+  margin-right: auto;
+  border: 5px solid rgb(0, 9, 11);
+  border-radius: 10px;
+  background-color: rgb(253, 214, 19);
 
 }
-img {
-float: left;
+nav ul {
+  list-style: none;
+  background-color: rgb(253, 214, 19);
 }
+nav ul li {
+  display: inline-block;
+  padding: 0px 20px;
+  border: 3px solid rgb(3, 113, 130);
+  border-radius: 10px;
+  background-color: rgb(19, 116, 253);
+}
+nav ul li a {
+  color: yellow;
+  transition: all 0.3s ease 0s;
+  background-color: rgb(19, 116, 253);
+}
+
+nav ul li a:hover {
+  color: #0088a9;
+}
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgb(85, 183, 150);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#sideimages ul {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 97%;
+  max-height: 97%;
+}
+#sideimages ul img {
+  display: flex;
+  justify-content: space-between;
+  border: 5px solid blueviolet;
+  border-radius: 20px;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+
+nav ul li{
+  font-family: cursive;
+  margin: auto;
+  padding: 7px;
+  border-radius: 10px;
+  border: 4px solid black;
+  
+}
+
+
+main section.first {
+  margin-top: 50px;
+  align-self: center;
+}
+
+body {
+  justify-content: center;
+  align-content: center;
+}
+
 h1 {
   text-align: center;
 }
 #Welcome {
   text-align: center;
 }
-a{
-  align-content: center;
+
+#Hours {
+  justify-content: center;
+  list-style-type: none;
+  list-style: none;
+  margin-left: 40vw;
+margin-top: 10px;
+margin-bottom: 20px;
 }
-header {
-  align-items: center;
-  text-align: center;
-}
-ul {
-  margin-left: 4vw;
-}
+
+
 #results {
   margin-left: 5vw;
+  align-self: center;
+}
+#Chinook img{
+  
+  align-content: center;
+
 }
