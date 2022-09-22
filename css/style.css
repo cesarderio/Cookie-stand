@@ -34,6 +34,7 @@ nav ul li {
   border: 3px solid rgb(3, 113, 130);
   border-radius: 10px;
   background-color: rgb(19, 116, 253);
+  font-size: larger;
 }
 nav ul li a {
   color: yellow;
@@ -94,10 +95,12 @@ main section.first {
 body {
   justify-content: center;
   align-content: center;
+  font-size: larger;
 }
 
 h1 {
   text-align: center;
+  font-size: xx-large;
 }
 #Welcome {
   text-align: center;
@@ -110,12 +113,21 @@ h1 {
   margin-left: 40vw;
 margin-top: 10px;
 margin-bottom: 20px;
+font-size: x-large;
+}
+#Hours li{
+  padding-top: 10px;
 }
 
 
 #results {
-  margin-left: 5vw;
+  padding-top: 5px;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
   align-self: center;
+  
 }
 #Chinook img{
   
@@ -123,18 +135,36 @@ margin-bottom: 20px;
 
 }
 #locations ul{
+  font-size: x-large;
     display: flex;
     justify-content: space-around;
    margin-top: 5px;
    list-style-type: none;
   }
 .first ul{
-  margin-left: 40vw;
+  text-align: center;
   align-content: center;
   align-self: center;
 }
+.first ul li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .first p{
-  margin-left: 28vw;
+  padding-top: 10px;
   align-content: center;
   align-self: center;
+}
+p {
+  font-size: large;
+  border-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+table, th, td {
+  border: 2px solid;
+  padding: 15px;
 }
