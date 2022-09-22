@@ -13,7 +13,7 @@ welcome.appendChild(welcomeHeading);
 
 let intro = document.getElementById('Welcome');
 let intropara = document.createElement('p');
-intropara.textContent = 'Pat\'s Salmon Cookies started as a small corner stand by Pat himself, way back in the day.';
+intropara.textContent = 'Pat\'s Salmon Cookies started as a small corner stand by Pat himself, way back in the day. His family has kept thier family recipe for generations, and now they want to share their delicious cookies with the world! Come on in and check out our variety of gluten free, animal and kid friendly cookies! ';
 intro.appendChild(intropara);
 
 
