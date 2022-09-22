@@ -21,10 +21,10 @@ intro.appendChild(intropara);
 
 
 // Hours
-let hours = document.getElementById('Hours');
+let hoursOpen = document.getElementById('Hours');
 let hoursHeading = document.createElement('h2');
 hoursHeading.textContent = 'Hours of Operation';
-hours.appendChild(hoursHeading);
+hoursOpen.appendChild(hoursHeading);
 
 let dailyHours = document.getElementById('Hours');
 let dailyHoursOpen = document.createElement('ul');
