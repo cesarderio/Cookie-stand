@@ -10,9 +10,7 @@ body
 
 }
 img {
- display: block;
- align-content: center;
- margin: auto;
+float: left;
 }
 h1 {
   text-align: center;
