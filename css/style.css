@@ -122,3 +122,19 @@ margin-bottom: 20px;
   align-content: center;
 
 }
+#locations ul{
+    display: flex;
+    justify-content: space-around;
+   margin-top: 5px;
+   list-style-type: none;
+  }
+.first ul{
+  margin-left: 40vw;
+  align-content: center;
+  align-self: center;
+}
+.first p{
+  margin-left: 28vw;
+  align-content: center;
+  align-self: center;
+}
