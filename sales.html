@@ -44,20 +44,21 @@
     <form action="" id="newLocation">
       <fieldset>
         <legend>Add New Location Data</legend>
-
-        <label for="locationName">Location Name:</label>
-        <input id="locationName" type="text" name="locationName">
-        <!-- event.target.location.value === user input-->
-        
-        <label for="minCust">Minimum Customers/Hour:</label>
-        <input id="minCust" type="text" name="minCust" required>
-        
-        <label for="maxCust">Maximum Customer/Hour:</label>
-        <input id="maxCust" type="text" name="maxCust" required>
-        
-        <label for="avgCC">Average Cookies/Customer:</label>
-        <input id="avgCC" type="text" name="avgCC" required>
-
+        <section class="form">
+          
+          <label for="locationName">Location Name:</label>
+          <input id="locationName" type="text" name="locationName">
+          
+          <label for="minCust">Minimum Customers/Hour:</label>
+          <input id="minCust" type="text" name="minCust" required>
+          
+          <label for="maxCust">Maximum Customer/Hour:</label>
+          <input id="maxCust" type="text" name="maxCust" required>
+          
+          <label for="avgCC">Average Cookies/Customer:</label>
+          <input id="avgCC" type="text" name="avgCC" required>
+          
+        </section>
       </fieldset>
       <button id="submit" type="submit">Submit</button>
     </form>

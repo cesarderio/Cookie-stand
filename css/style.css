@@ -192,9 +192,9 @@ p {
 }
 
 table {
-  
-  margin-left: 40px;
-  margin-right: 40px;
+ width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 table, th, td {
   background-color: aqua;
@@ -213,8 +213,54 @@ a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
 
+.form{
+  width: 90%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  background-color: aqua;
+  width: ;
+}
 
 fieldset {
-  display: flex;
-  justify-content:flex-end
+  background-color: aqua;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ 
+}
+legend {
+  text-align: center;
+  padding-top: 15px;
+  background-color: aqua;
+  padding-bottom: ;
+}
+form {
+  
+  width: 90%;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aqua;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+input{
+
+  background-color: aqua;
+}
+label{
+  text-align: center;
+  
+  background-color: aqua;
+
+}
+
+button{
+  justify-content: center;
+  align-self: center;
+  border: 3px solid black;
+  border-radius: 7px;
+  margin-right: 18px;
+  
 }
