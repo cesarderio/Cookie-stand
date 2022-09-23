@@ -9,14 +9,13 @@ body{
   width: 100vw;
 }
 header {
-  padding-left: 10px;
-  padding-right: 10px;
+  /*padding-left: 10px;
+  padding-right: 10px;*/
   width: 100vw;
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  
   border: 3px solid rgb(3, 113, 130);
   border-radius: 10px;
   background-color: rgb(253, 214, 19);
@@ -24,19 +23,21 @@ header {
 
 header img {
   cursor: pointer;
-  margin-right: auto;
+  /*margin-right: auto;*/
   border: 3px solid rgb(0, 9, 11);
   border-radius: 10px;
   background-color: aquamarine;
 
 }
 nav ul {
+  margin: auto;
+  /*width: 100vw;*/
   list-style: none;
   background-color: rgb(253, 214, 19);
 }
 nav ul li {
   display: inline-block;
-  padding-right: 50px;
+  justify-content: space-evenly;
   /* padding: 0px 20px; */
   border: 1px solid rgb(3, 113, 130);
   border-radius: 10px;
@@ -60,17 +61,6 @@ nav ul li a:hover {
 
 .first ul li a:hover{
   color: yellow;
-}
-
-
-button {
-  color: ;
-  margin-left: 20px;
-  padding: 9px 25px;
-  background-color: rgb(85, 183, 150);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
 }
 
 #sideimages ul {
@@ -265,7 +255,12 @@ label{
   background-color: aqua;
 }
 
+
+
 button{
+  padding: 9px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
   font-size: larger;
   font-weight: bold;
   background-color: aqua;
@@ -283,12 +278,58 @@ button{
   align-items: center;
 }
 
-footer p{
+footer {
+  display: flex;
+  justify-content: space-evenly;
   border: 2px groove black;
   border-radius: 10px;
+  background-color: aqua;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer p{
+  padding-top: 15px;
+  text-align: center;
+  background-color: aqua;
   font-size: x-large;
   font-weight: bold;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: aqua;
+}
+
+.fa {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  align-content: center;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #f09433; 
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+  color: white;
+}
+.fa-youtube {
+  color: white;
+  background: rgb(254, 2, 2);
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }
