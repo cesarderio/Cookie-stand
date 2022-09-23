@@ -31,13 +31,38 @@
       <h1>Pat's Salmon Cookies</h1>
     </section>
   
-    <section id="Welcome"></section>
+ <section id="Welcome"></section>
+   
+    <br>
+    <br>
     <br>
     <section>
       <h1>Sales At Our Locations</h1>
     </section>
     <br>
-    <section id="results"></section>
+    <section id="salesTable"></section>
+    <form action="" id="newLocation">
+      <fieldset>
+        <legend>Add New Location Data</legend>
+
+        <label for="locationName">Location Name:</label>
+        <input id="locationName" type="text" name="locationName">
+        <!-- event.target.location.value === user input-->
+        
+        <label for="minCust">Minimum Customers/Hour:</label>
+        <input id="minCust" type="text" name="minCust" required>
+        
+        <label for="maxCust">Maximum Customer/Hour:</label>
+        <input id="maxCust" type="text" name="maxCust" required>
+        
+        <label for="avgCC">Average Cookies/Customer:</label>
+        <input id="avgCC" type="text" name="avgCC" required>
+
+      </fieldset>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+    <br>
+    <br>
     <br>
     <section id="sideimages">
       <ul>
@@ -48,6 +73,9 @@
     </section>
     <section id="Hours"></section>
   </main>
+  <footer>
+    <p>Raphael Chookagian 2022</p>
+  </footer>
   <script src="./app.js"></script>
 </body>
 </html>

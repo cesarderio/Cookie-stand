@@ -9,11 +9,11 @@ let days = [
   "Saturday",
   "Sunday",
 ];
-
 let open = "6:00 am to 8:00 PM";
 let closed = "Sorry we're closed";
 
 //Welcome
+/*
 let welcome = document.getElementById("Welcome");
 let welcomeHeading = document.createElement("h2");
 welcomeHeading.textContent = "Welcome to Pat's Salmon Cookies!";
@@ -24,8 +24,8 @@ let intropara = document.createElement("p");
 intropara.textContent =
   "Pat's Salmon Cookies started as a small corner stand by Pat himself, way back in the day. His family has kept their family recipe for generations, and now they want to share their delicious cookies with the world! Come on in and check out our variety of gluten free, animal and kid friendly cookies! ";
 intro.appendChild(intropara);
-
-// Hours
+*/
+//----Hours-of-Operation------------------------
 let hoursOpen = document.getElementById("Hours");
 let hoursHeading = document.createElement("h2");
 hoursHeading.textContent = "Hours of Operation";
@@ -40,7 +40,6 @@ for (let i = 0; i < days.length - 1; i++) {
   listItem.textContent = `${days[i]}: ${open}`;
   dailyHoursOpen.appendChild(listItem);
 }
-
 let closedSun = document.createElement("li");
 closedSun.textContent = `${days.pop()}: ${closed}`;
 dailyHoursOpen.appendChild(closedSun);
@@ -65,26 +64,20 @@ let hours = [
 ];
 //---------------Global----------------------------------
 
-let tblElem = document.getElementById("results");
-let tableElem = document.createElement("table");
-tblElem.appendChild(tableElem);
-
+let salesTable = document.getElementById("salesTable");
+let tableElem = document.createElement("table");    /*change to tbl */
+salesTable.appendChild(tableElem);
 let allCookieCafes = [];
 
-//-----Random-num-Generator-------------------
-/*function getRandom(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-*/
 // Constructor -------------------------------------
 function ShopLocations(location, minHrCust, maxHrCust, averageCookiesPerCust) {
   this.location = location;
   this.minHrCust = minHrCust;
   this.maxHrCust = maxHrCust;
   this.averageCookiesPerCust = averageCookiesPerCust;
-  this.dailyTotal = 0;
   this.hrlyTotal = [];
-  this.customer = [];
+  this.dailyTotal = 0;
+  this.customersPerHr = [];
   allCookieCafes.push(this);
 }
 
@@ -96,7 +89,7 @@ new ShopLocations("Lima", 2, 16, 4.6);
 
 ShopLocations.prototype.custPerHour = function () {
   for (let i = 0; i < hours.length; i++) {
-    this.customer.push(
+    this.customersPerHr.push(
       Math.floor(
         Math.random() * (this.maxHrCust - this.minHrCust + 1) + this.minHrCust
       )
@@ -104,18 +97,17 @@ ShopLocations.prototype.custPerHour = function () {
   }
 };
 
-ShopLocations.prototype.cookiesPerHr = function () {
-  for (let i = 0; i < this.customer.length; i++) {
+ShopLocations.prototype.totalPerHr = function () {
+  for (let i = 0; i < this.customersPerHr.length; i++) {
     this.hrlyTotal[i] = Math.round(
-      this.customer[i] * this.averageCookiesPerCust
+      this.customersPerHr[i] * this.averageCookiesPerCust
     );
     this.dailyTotal += this.hrlyTotal[i];
-    console.log(this.hrlyTotal[i]);
+
   }
 };
 // Table DOM Render----------
 ShopLocations.prototype.render = function () {
-  // tr is ul
   let trElem = document.createElement("tr");
   tableElem.appendChild(trElem);
 
@@ -131,6 +123,13 @@ ShopLocations.prototype.render = function () {
   tdElem = document.createElement("td");
   tdElem.textContent = this.dailyTotal;
   trElem.appendChild(tdElem);
+
+  ShopLocations.prototype.renderAll = function(){
+    this.custPerHour();
+    this.totalPerHr();
+    this.dailyTotal();
+    this.render();
+  };
 };
 
 //---------------------------HEADER---------
@@ -151,7 +150,8 @@ function createHeader() {
   tableElem.appendChild(trElem);
 }
 createHeader();
-//-------------------------------
+
+//--------------Create-Footer-----------------
 function createFooter() {
   let trFoot = document.createElement("tfoot");
   let trElem = document.createElement("tr");
@@ -182,24 +182,73 @@ function createFooter() {
 }
 
 //----------------------------
+function renderAllLocations(){
+  for(let i = 0; i < allCookieCafes.length; i++){
+    allCookieCafes[i].custPerHour();
+    allCookieCafes[i].totalPerHr();
+    allCookieCafes[i].render();
+  }
+}
+renderAllLocations();
 
+/*
 allCookieCafes[0].custPerHour();
 allCookieCafes[1].custPerHour();
 allCookieCafes[2].custPerHour();
 allCookieCafes[3].custPerHour();
 allCookieCafes[4].custPerHour();
 
-allCookieCafes[0].cookiesPerHr();
-allCookieCafes[1].cookiesPerHr();
-allCookieCafes[2].cookiesPerHr();
-allCookieCafes[3].cookiesPerHr();
-allCookieCafes[4].cookiesPerHr();
+allCookieCafes[0].totalPerHr();
+allCookieCafes[1].totalPerHr();
+allCookieCafes[2].totalPerHr();
+allCookieCafes[3].totalPerHr();
+allCookieCafes[4].totalPerHr();
 
 allCookieCafes[0].render();
 allCookieCafes[1].render();
 allCookieCafes[2].render();
 allCookieCafes[3].render();
 allCookieCafes[4].render();
-
+*/
 createFooter();
-//createFooter();
+
+
+//----------Create-New-Location-Form-------
+let addLocationForm = document.getElementById("newLocation");
+let locationName = document.getElementById("locationName");
+let minCust = document.getElementById("minCust");
+let maxCust = document.getElementById("maxCust");
+let avgCC = document.getElementById("avgCC");
+
+
+function newLocationSubmit(event) {
+  event.preventDefault();
+
+  let locationNameTarget = event.target.locationName.value;
+  console.log(locationName);
+  
+  let minCustTarget = +event.target.minCust.value;
+  console.log(minCust);
+  
+  let maxHrCustTarget = +event.target.maxCust.value;
+  console.log(maxCust);
+  
+  let avgCCTarget = +event.target.avgCC.value;
+  console.log(avgCC);
+  
+  let newStore = new ShopLocations(locationNameTarget, minCustTarget, maxHrCustTarget, avgCCTarget);
+
+  newStore.custPerHour();
+  newStore.totalPerHr();
+  newStore.render();
+let tableFoot = document.querySelector('tfoot');
+console.log(tableFoot);
+tableFoot.remove();
+  createFooter();
+  addLocationForm.reset();
+}
+//------
+addLocationForm.addEventListener("submit", newLocationSubmit);
+
+
+
