@@ -48,6 +48,7 @@ nav ul li a {
   color: yellow;
   transition: all 0.3s ease 0s;
   background-color: rgb(19, 116, 253);
+  font-family: 'Italianno', cursive;
 }
 
 nav ul li a:hover {
@@ -131,7 +132,11 @@ h1 {
 #Hours li{
   padding-top: 10px;
 }
-
+#Hours li:hover {
+  cursor:pointer;
+  transition: all 0.3s ease 0s;
+  opacity: 0.7;
+}
 
 #results {
   padding-top: 5px;
@@ -162,7 +167,8 @@ h1 {
   border-radius: 5px;
   font-weight: bold;
   transition: all 0.3s ease 0s;
-  
+  font-family: 'Italianno', cursive;
+  font-size: xx-large;
 ;
   }
   #locations ul li a:hover{
@@ -193,8 +199,8 @@ p {
 }
 
 table {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -237,17 +243,21 @@ legend {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-bottom: ;
 }
 form {
 }
 input{
+  font-weight: bold;
+  font-size: 20px;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding-top: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   border: 3px solid black;
   border-radius: 10px;
-  background-color: ;
 }
 label{
   font-weight: bold;
@@ -310,6 +320,7 @@ footer p{
 }
 
 .fa:hover {
+  transition: all 0.3s ease 0s;
   opacity: 0.7;
 }
 
@@ -325,8 +336,10 @@ footer p{
   color: white;
 }
 .fa-youtube {
-  color: white;
-  background: rgb(254, 2, 2);
+  color: red;
+  background: white;
+ 
+
 }
 
 .fa-twitter {
