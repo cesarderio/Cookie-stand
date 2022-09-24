@@ -6,12 +6,15 @@
   
 }
 body{
-  width: 100vw;
+  
 }
 header {
   /*padding-left: 10px;
   padding-right: 10px;*/
   width: 100vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
   position: fixed;
   display: flex;
   justify-content: space-evenly;
@@ -22,29 +25,35 @@ header {
 }
 
 header img {
+  width: 20vw;
+  height: auto;
+  margin-left: 2vw;
+  margin-right: 2vw;
   cursor: pointer;
-  /*margin-right: auto;*/
   border: 3px solid rgb(0, 9, 11);
   border-radius: 10px;
   background-color: aquamarine;
 
 }
-nav ul {
-  margin: auto;
-  /*width: 100vw;*/
+header ul {
+  margin-left: auto;
+  margin-right: auto;
   list-style: none;
   background-color: rgb(253, 214, 19);
 }
 nav ul li {
   display: inline-block;
   justify-content: space-evenly;
-  /* padding: 0px 20px; */
+  padding: 0px; 
   border: 1px solid rgb(3, 113, 130);
   border-radius: 10px;
   background-color: rgb(19, 116, 253);
-  font-size: larger;
+  
+  
 }
 nav ul li a {
+  
+  width: 10vw;
   color: yellow;
   transition: all 0.3s ease 0s;
   background-color: rgb(19, 116, 253);
@@ -78,6 +87,8 @@ nav ul li a:hover {
   
 }
 #sideimages ul img {
+  width: auto;
+  height: auto;
   display: flex;
   justify-content: space-between;
   border: 2px solid rgba(137, 43, 226, 0.66);
@@ -102,11 +113,16 @@ nav ul li{
 
 
 main section.first {
+  width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 150px;
   align-self: center;
 }
 
 body {
+  
+  margin: auto;
   justify-content: center;
   align-content: center;
   font-size: larger;
@@ -118,16 +134,22 @@ h1 {
   font-size: xx-large;
 }
 #Welcome {
+  width: 98vw;
+  margin-left: auto;
+  margin: auto;
   text-align: center;
 }
 
 #Hours {
+  width: 65vw;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   list-style-type: none;
   list-style: none;
   margin-top: 10px;
   margin-bottom: 20px;
-  font-size: x-large;
+  
 }
 #Hours li{
   padding-top: 10px;
@@ -138,19 +160,11 @@ h1 {
   opacity: 0.7;
 }
 
-#results {
-  padding-top: 5px;
-  text-rendering: optimizeLegibility;
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  align-self: center;
+#salesTable {
   
 }
 #Chinook img{
-  
   align-content: center;
-
 }
 #locations ul{
   font-size: x-large;
@@ -199,17 +213,20 @@ p {
 }
 
 table {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
   
-  width: 90%;
+  width: 97vw;
   margin-left: auto;
   margin-right: auto;
+
 }
 table, th, td {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: aqua;
   border-radius: 20px;
   border: 3px solid;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
 }
 a:link { text-decoration: none; }
 
@@ -224,11 +241,12 @@ a:active { text-decoration: none; }
 
 .filldata{
    /* ext-align: center; */
-  width: 30vw;
+  width: 25vw;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+ 
+  padding-left: 20px;
+  padding-right: 20px;
   display:grid;
   justify-content: space-evenly;
   border: 3px solid black;
@@ -238,6 +256,7 @@ a:active { text-decoration: none; }
 
 
 legend {
+
   font-weight: bold;
   font-size: x-large;
   text-align: center;
@@ -247,6 +266,9 @@ legend {
 form {
 }
 input{
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: bold;
   font-size: 20px;
   align-content: center;
@@ -260,6 +282,11 @@ input{
   border-radius: 10px;
 }
 label{
+
+  padding-top: 5px;
+  width: 18vw;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: bold;
   text-align: center;
   background-color: aqua;
@@ -289,6 +316,7 @@ button{
 }
 
 footer {
+  width: 100vw;
   display: flex;
   justify-content: space-evenly;
   border: 2px groove black;
@@ -298,10 +326,11 @@ footer {
   padding-bottom: 30px;
 }
 footer p{
+  
   padding-top: 15px;
   text-align: center;
   background-color: aqua;
-  font-size: x-large;
+  
   font-weight: bold;
 }
 
