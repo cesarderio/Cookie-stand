@@ -28,7 +28,7 @@ intro.appendChild(intropara);
 //----Hours-of-Operation------------------------
 let hoursOpen = document.getElementById("Hours");
 let hoursHeading = document.createElement("h2");
-hoursHeading.textContent = "Hours of Operation";
+hoursHeading.textContent = "Hours of Operation:";
 hoursOpen.appendChild(hoursHeading);
 
 let dailyHours = document.getElementById("Hours");
@@ -65,7 +65,7 @@ let hours = [
 //---------------Global----------------------------------
 
 let salesTable = document.getElementById("salesTable");
-let tableElem = document.createElement("table");    /*change to tbl */
+let tableElem = document.createElement("table");
 salesTable.appendChild(tableElem);
 let allCookieCafes = [];
 
@@ -226,24 +226,24 @@ function newLocationSubmit(event) {
 
   let locationNameTarget = event.target.locationName.value;
   console.log(locationName);
-  
+
   let minCustTarget = +event.target.minCust.value;
   console.log(minCust);
-  
+
   let maxHrCustTarget = +event.target.maxCust.value;
   console.log(maxCust);
-  
+
   let avgCCTarget = +event.target.avgCC.value;
   console.log(avgCC);
-  
+
   let newStore = new ShopLocations(locationNameTarget, minCustTarget, maxHrCustTarget, avgCCTarget);
 
   newStore.custPerHour();
   newStore.totalPerHr();
   newStore.render();
-let tableFoot = document.querySelector('tfoot');
-console.log(tableFoot);
-tableFoot.remove();
+  let tableFoot = document.querySelector("tfoot");
+  console.log(tableFoot);
+  tableFoot.remove();
   createFooter();
   addLocationForm.reset();
 }

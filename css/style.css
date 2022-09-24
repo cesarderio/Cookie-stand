@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
   background-color: aquamarine;
-  
 }
-
+body {
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  font-size: larger;
+}
 header {
-  /*padding-left: 10px;
-  padding-right: 10px;*/
   width: 100vw;
   height: auto;
   margin-left: auto;
@@ -17,11 +19,14 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 3px solid rgb(3, 113, 130);
-  border-radius: 10px;
+  
   background-color: rgb(253, 214, 19);
+  border-left: 3px solid rgb(3, 113, 130);;
+  border-right: 3px solid rgb(3, 113, 130);;
+  border-bottom: 3px solid rgb(3, 113, 130);;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-
 header img {
   width: 20vw;
   height: auto;
@@ -29,7 +34,6 @@ header img {
   border: 3px solid rgb(0, 9, 11);
   border-radius: 10px;
   background-color: aquamarine;
-
 }
 header ul {
   margin-left: auto;
@@ -44,56 +48,19 @@ nav ul li {
   border: 1px solid rgb(3, 113, 130);
   border-radius: 10px;
   background-color: rgb(19, 116, 253);
-  
-  
 }
 nav ul li a {
-  
   width: 10vw;
   color: yellow;
   transition: all 0.3s ease 0s;
   background-color: rgb(19, 116, 253);
   font-family: 'Italianno', cursive;
 }
-
 nav ul li a:hover {
   color: #000709;
+  font-size: large;
+  font-weight: bolder;
 }
-
-.first ul li a{
-  color: rgb(20, 1, 125);
-  transition: all 0.3s ease 0s;
-}
-
-.first ul li a:hover{
-  color: yellow;
-}
-
-#sideimages ul {
-  align-items: center;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
-  max-width: 97%;
-  max-height: 97%;
-  
-}
-#sideimages ul img {
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid rgba(137, 43, 226, 0.66);
-  border-radius: 20px;
-  max-width: 95%;
-  max-height: 95%;
-}
-
-
 nav ul li{
   font-family: cursive;
   margin: auto;
@@ -105,29 +72,61 @@ nav ul li{
   padding-left: 10px;
   padding-right: 10px;
 }
-
-
-
-main section.first {
-  width: 50vw;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 15vh;
-  align-self: center;
-}
-
-body {
-  
-  margin: auto;
-  justify-content: center;
-  align-content: center;
-  font-size: larger;
-}
-
 h1 {
   font-weight: bold;
   text-align: center;
   font-size: xx-large;
+}
+h2{
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+main section.intro {
+  width: 98vw;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 12vh;
+  align-self: center;
+}
+main section.first {
+  width: 56vw;
+  margin-right: auto;
+  margin-left: auto;
+  align-self: center;
+}
+.first ul li a{
+  color: rgb(20, 1, 125);
+  transition: all 0.3s ease 0s;
+}
+.first ul li a:hover{
+  color: yellow;
+}
+#sideimages ul {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 97%;
+  max-height: 97%;
+}
+#sideimages ul img {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgba(137, 43, 226, 0.66);
+  border-radius: 20px;
+  max-width: 95%;
+  max-height: 95%;
+}
+#sideimages ul img:hover{
+  background-color: #55ACEE;
+  border: 4px solid black;
+  padding: 4px;
 }
 #Welcome {
   width: 98vw;
@@ -135,7 +134,6 @@ h1 {
   margin: auto;
   text-align: center;
 }
-
 #Hours {
   width: 65vw;
   margin-left: auto;
@@ -145,33 +143,36 @@ h1 {
   list-style: none;
   margin-top: 10px;
   margin-bottom: 20px;
-  
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #Hours li{
-  padding-top: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
-#Hours li:hover {
+#Hours ul li:hover {
+  color: yellow;
+  background-color: #55ACEE;
+  border: 3px solid black;
+  padding-right: 10px;
+  padding-left: 10px;
   cursor:pointer;
   transition: all 0.3s ease 0s;
   opacity: 0.7;
-}
-
-#salesTable {
-  
+  border-radius: 10px;
 }
 #Chinook img{
   align-content: center;
 }
 #locations ul{
+  padding-top: 10px;
   font-size: x-large;
-    display: flex;
-    justify-content: space-around;
-   margin-top: 5px;
-   list-style-type: none;
-   transition: all 0.3s ease 0s;
-   
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  list-style-type: none;
+  transition: all 0.3s ease 0s;
   }
-
   #locations ul li a {
   color: blueviolet;
   border-radius: 5px;
@@ -179,10 +180,13 @@ h1 {
   transition: all 0.3s ease 0s;
   font-family: 'Italianno', cursive;
   font-size: xx-large;
-;
   }
   #locations ul li a:hover{
     color: yellow;
+    background-color: #55ACEE;
+    border: 3px solid black;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 .first ul{
   text-align: center;
@@ -190,30 +194,46 @@ h1 {
   align-self: center;
 }
 .first ul li {
-  
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
-.first p{
+.first ul li a:hover{
+  cursor:pointer;
+  transition: all 0.3s ease 0s;
+  opacity: 0.7;
+  color: yellow;
+  background-color: #55ACEE;
+  border: 3px solid black;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+.firstp{
   padding-top: 10px;
+  padding-bottom: 2px;
   align-content: center;
   align-self: center;
+}
+.secondp{
+  padding-top: 5px;
+  padding-bottom: 10px;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 p {
   font-size: large;
   border-top: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   text-align: center;
+  align-content: center;
+  align-self: center;
 }
-
 table {
-  
   width: 97vw;
   margin-left: auto;
   margin-right: auto;
-
 }
 table, th, td {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -226,21 +246,16 @@ table, th, td {
 }
 a:link { text-decoration: none; }
 
-
 a:visited { text-decoration: none; }
 
-
 a:hover { text-decoration: none; }
-
 
 a:active { text-decoration: none; }
 
 .filldata{
-   /* ext-align: center; */
   width: 25vw;
   margin-left: auto;
   margin-right: auto;
- 
   padding-left: 20px;
   padding-right: 20px;
   display:grid;
@@ -249,17 +264,12 @@ a:active { text-decoration: none; }
   background-color: aqua;
   border-radius: 10px;
 }
-
-
 legend {
-
   font-weight: bold;
   font-size: x-large;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-form {
 }
 input{
   width: 20vw;
@@ -278,7 +288,6 @@ input{
   border-radius: 10px;
 }
 label{
-
   padding-top: 5px;
   width: 18vw;
   margin-left: auto;
@@ -287,9 +296,6 @@ label{
   text-align: center;
   background-color: aqua;
 }
-
-
-
 button{
   padding: 9px 25px;
   cursor: pointer;
@@ -304,13 +310,11 @@ button{
   justify-content: center;
   align-items: center;
 }
-.btn
-{
+.btn{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 footer {
   width: 100vw;
   margin-left: auto;
@@ -324,14 +328,20 @@ footer {
   padding-bottom: 15px;
 }
 footer p{
-  
   padding-top: 15px;
   text-align: center;
   background-color: aqua;
-  
   font-weight: bold;
 }
-
+footer p:hover{
+  color: #fec564;
+  border: 3px solid black;
+  background-color: #5258cf;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .fa {
   display: flex;
   justify-content: center;
@@ -345,17 +355,15 @@ footer p{
   text-decoration: none;
   align-content: center;
 }
-
 .fa:hover {
   transition: all 0.3s ease 0s;
   opacity: 0.7;
+  
 }
-
 .fa-facebook {
   background: #3B5998;
   color: white;
 }
-
 .fa-instagram {
   background: #f09433; 
   background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
@@ -365,10 +373,7 @@ footer p{
 .fa-youtube {
   color: red;
   background: white;
- 
-
 }
-
 .fa-twitter {
   background: #55ACEE;
   color: white;
