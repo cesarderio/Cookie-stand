@@ -5,9 +5,7 @@
   background-color: aquamarine;
   
 }
-body{
-  
-}
+
 header {
   /*padding-left: 10px;
   padding-right: 10px;*/
@@ -27,8 +25,6 @@ header {
 header img {
   width: 20vw;
   height: auto;
-  margin-left: 2vw;
-  margin-right: 2vw;
   cursor: pointer;
   border: 3px solid rgb(0, 9, 11);
   border-radius: 10px;
@@ -116,7 +112,7 @@ main section.first {
   width: 50vw;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 150px;
+  padding-top: 15vh;
   align-self: center;
 }
 
@@ -317,13 +313,15 @@ button{
 
 footer {
   width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-evenly;
   border: 2px groove black;
   border-radius: 10px;
   background-color: aqua;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 footer p{
   
