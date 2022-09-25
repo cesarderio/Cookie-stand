@@ -4,12 +4,30 @@
   padding: 0;
   background-color: aquamarine;
 }
+/*
 body {
   margin: auto;
   justify-content: center;
   align-content: center;
   font-size: larger;
+}*/
+/*
+.content {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  width: 100%;
+  overflow: scroll;
 }
+#content {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+}*/
+
+
 header {
   width: 100vw;
   height: auto;
@@ -75,12 +93,11 @@ nav ul li{
 }
 
 .intro{
- 
+ padding-top: 11vh;
 }
 
 h1 {
-  padding-top: 30px;
-  margin-top: .2vh;
+  padding-top: 60px;
   font-weight: bold;
   text-align: center;
   font-size: xx-large;
@@ -93,7 +110,7 @@ main section.intro {
   width: 98vw;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 10%;
+  /*padding-top: 10%;*/
   align-self: center;
   margin-top: ;
 }
